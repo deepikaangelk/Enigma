@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Scheduler</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Add your styling here */
+    </style>
+</head>
+<body>
+    <h1>Class Scheduler</h1>
+
+    <form id="courseForm">
+        <label for="courseName">Course Name:</label>
+        <input type="text" id="courseName" required>
+
+        <label for="courseDays">Days:</label>
+        <input type="text" id="courseDays" placeholder="e.g., Mon, Wed" required>
+
+        <label for="courseTime">Time:</label>
+        <input type="text" id="courseTime" placeholder="e.g., 10:00 AM" required>
+
+        <button type="button" onclick="addCourse()">Add Course</button>
+    </form>
+
+    <h2>Schedule</h2>
+    <ul id="scheduleList"></ul>
+
+    <script>
+        let schedule = [];
+
+        function addCourse() {
+            const courseName = document.getElementById('courseName').value;
+            const courseDays = document.getElementById('courseDays').value.split(',').map(day => day.trim());
+            const courseTime = document.getElementById('courseTime').value;
+
+            if (isCourseValid(courseDays, courseTime)) {
+                const course = {
+                    name: courseName,
+                    days: courseDays,
+                    time: courseTime
+                };
+
+                schedule.push(course);
+                displaySchedule();
+            } else {
+                alert('Course time conflict. Please choose a different time or day.');
+            }
+        }
+
+        function isCourseValid(newDays, newTime) {
+            for (const existingCourse of schedule) {
+                if (existingCourse.days.some(day => newDays.includes(day)) && existingCourse.time === newTime) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function displaySchedule() {
+            const scheduleList = document.getElementById('scheduleList');
+            scheduleList.innerHTML = '';
+
+            for (const course of schedule) {
+                const listItem = document.createElement('li');
+                listItem.textContent = $;{course.name} ; $;{course.days.join(',')} $;{course.time};
+                scheduleList.appendChild(listItem);
+            }
+        }
+    </script>
+</body>
+</html>

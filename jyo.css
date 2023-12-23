@@ -1,0 +1,56 @@
+/* Basic styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  .chat-section {
+    display: flex;
+  }
+  
+  .chat-messages {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-right: 20px;
+    height: 300px;
+    overflow-y: scroll;
+  }
+  
+  .chat-message {
+    margin-bottom: 10px;
+  }
+  
+  .doubt-section {
+    flex-basis: 300px;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .doubt-section h2 {
+    margin-top: 0;
+  }
+  
+  .empty-box {
+    border: 1px dashed #ccc;
+    height: 200px;
+    margin-top: 10px;
+    padding: 10px;
+  }
+  

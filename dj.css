@@ -1,0 +1,59 @@
+/* Resetting some default styles for better consistency */
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Basic styling for the layout */
+body {
+  font-family: Arial, Helvetica,sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #333;
+  color: #9d5b5b;
+  padding: 20px 0;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #52d2b2;
+  text-decoration: none;
+}
+
+main {
+   margin-left: 350px ;
+   max-width: 100%;
+   height: auto;
+   padding: 65px 0;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #333;
+  color: #fff;
+}
